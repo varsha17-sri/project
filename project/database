@@ -1,0 +1,50 @@
+Database (MongoDB)
+Purpose: Store structured data in collections.
+
+Collections Example:
+
+Users
+
+json
+{
+  "_id": ObjectId,
+  "name": "John Doe",
+  "role": "Officer",
+  "email": "john@example.com",
+  "phone": "9876543210",
+  "password": "hashed"
+}
+Vehicles
+
+json
+{
+  "_id": ObjectId,
+  "owner_id": ObjectId,
+  "registration_no": "AP09AB1234",
+  "model": "Honda City",
+  "color": "Black"
+}
+Violations
+
+json
+{
+  "_id": ObjectId,
+  "vehicle_id": ObjectId,
+  "officer_id": ObjectId,
+  "violation_type": "Signal Jump",
+  "location": "Main Road",
+  "violation_date": ISODate("2026-03-24T14:50:00Z"),
+  "fine_amount": 500,
+  "status": "Pending"
+}
+Payments
+
+json
+{
+  "_id": ObjectId,
+  "violation_id": ObjectId,
+  "amount": 500,
+  "payment_date": ISODate("2026-03-24T15:00:00Z"),
+  "mode": "Online",
+  "status": "Success"
+}
